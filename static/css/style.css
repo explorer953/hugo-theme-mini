@@ -29,6 +29,9 @@ blockquote {
   border-left: 3px solid #eee;
   color: #757575;
 }
+blockquote p{
+  margin: 0;
+}
 
 hr {
   display: block;
@@ -94,18 +97,34 @@ h4 {
   margin-bottom: 0em;
 }
 p {
-  margin-block-start: 0.2em;
-  margin-block-end: 0.2em;
-  margin-bottom: 1em;
+  margin-block-start: 0.5em;
+  margin-block-end: 0.5em;
 }
 p,
 pre {
   word-break: normal;
   overflow-wrap: anywhere;
 }
+.markdown-image{
+  max-width: 100%;
+  align-self: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
 .markdown-image img {
   max-width: 100%;
 }
+
+@media (min-width: 1200px) {
+  .markdown-image{
+    max-width: 1200px;
+  }
+  .markdown-image img {
+    max-width: 1200px;
+  }
+}
+
 .anchor { 
   font-size: 100%; 
   visibility: hidden; 
@@ -117,15 +136,16 @@ h3:hover a,
 h4:hover a { 
   visibility: visible
 }
-.highlight pre {
-  padding: 7px;
-  overflow-x: auto;
-}
 
 .highlight {
   max-width: 100%;
   overflow-x: auto;
 }
+.highlight pre {
+  padding: 7px;
+  overflow-x: auto;
+}
+
 p code, ul code {
   font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, Courier, monospace;
   font-size: 13px;
@@ -227,6 +247,10 @@ nav.navigation a.button {
   padding-inline-start: 24px;
 }
 
+ul {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
 /* comment */
 #comment {
   margin-top: 64px;
@@ -417,6 +441,8 @@ nav.navigation a.button {
 
 #single .content {
   margin-top: 36px;
+  display: flex;           /* Use flexbox for centering */
+  flex-direction: column;
 }
 
 #single .tags {
